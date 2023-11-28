@@ -24,15 +24,12 @@ public class Option {
     public String getMensaje() {
         return mensaje;
     }
-
     public int getChatbotCodeLink() {
         return chatbotCodeLink;
     }
-
     public int getInitialFlowCodeLink() {
         return initialFlowCodeLink;
     }
-
     public List<String> getKeywords() {
         return keywords;
     }

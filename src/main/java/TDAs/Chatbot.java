@@ -26,15 +26,12 @@ public class Chatbot {
     public String getName() {
         return name;
     }
-
     public String getWelcomeMessage() {
         return welcomeMessage;
     }
-
     public int getStartFlowID() {
         return startFlowID;
     }
-
     public List<Flow> getChatbotFlows() {
         return chatbotFlows;
     }

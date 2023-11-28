@@ -9,6 +9,7 @@ public class User {
     String userStatus;
     String userPermissions;
 
+    /* Constructores */
     public User(String username) {
 
         this.username = username;
@@ -18,19 +19,23 @@ public class User {
 
     }
 
+    /* Selectores */
     public String getUsername() {
         return username;
     }
-
     public List<ChatHistory> getHistorial() {
         return historial;
     }
-
     public String getUserStatus() {
         return userStatus;
     }
-
     public String getUserPermissions() {
         return userPermissions;
+    }
+
+    /* Metodo publico para cambiar el estado de sesion de un usuario */
+    public void setUserStatus(String status){
+        this.userStatus = status;
+
     }
 }
