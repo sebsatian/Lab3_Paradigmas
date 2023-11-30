@@ -2,6 +2,8 @@ package TDAs;
 
 import java.util.List;
 import java.util.ArrayList;
+
+
 public class System {
     /* Atributos */
     String name;
@@ -84,7 +86,7 @@ public class System {
         }
     }
     public void systemTalk(String message){
-        /*desarrollar*/
+        /* desarrollar */
     }
 
 }
