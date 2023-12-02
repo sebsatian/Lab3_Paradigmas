@@ -76,17 +76,28 @@ public class System {
         }
     }
 
+    private boolean isSomeUserLogged(){
+        for(User user : systemUsers){
+            if (user.getUserStatus().equals("Logged")){
+                return true;
+            }
+        }
+        return false;
+    }
+
     /* Metodo publico para cerrar la sesion del usuario que la tenga iniciada */
     public void systemLogout(){
         for(User user : systemUsers){
-            if (user.getUserStatus().equals("logged")){
+            if (isSomeUserLogged()){
                 user.setUserStatus("notLogged");
                 break;
             }
         }
     }
-    public void systemTalk(String message){
-        /* desarrollar */
+    public void systemTalk(String message ){
+        if (isSomeUserLogged()){
+
+        }
     }
 
 }
