@@ -51,4 +51,12 @@ public class Chatbot {
         }
     return false;
     }
+    public Flow findFlowByID(int currentFlow) {
+        for (Flow flow : this.chatbotFlows) {
+            if (flow.getId() == currentFlow) {
+                return Flow;
+            }
+        }
+        return null; // Retorna null si no se encuentra el chatbot
+    }
 }

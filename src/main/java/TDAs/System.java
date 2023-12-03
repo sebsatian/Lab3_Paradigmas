@@ -99,9 +99,36 @@ public class System {
     }
     public void systemTalk(String message ){
         if(isAnyUserLogged()){
+            if (isNumber(message)){
+
+
+            }
+        }
+    }
+
+    /* Obtener opciones del flujo */
+
+
+
+    /* Metodo para encontrar el flujo y el chatbot actuales */
+    private Chatbot findChatbotByCode(int currentChatbot) {
+        for (Chatbot chatbot : this.systemChatbots) {
+            if (chatbot.getID() == currentChatbot) {
+                return chatbot;
+            }
+        }
+        return null; // Retorna null si no se encuentra el chatbot
+    }
+
+
+
+    private int findOption (String message) {
+        for (Option option : currentFlow.get){
 
         }
     }
+
+    /* Metodo para saber si la entrada del usuario es un numero o no */
     private boolean isNumber(String message){
         try {
             Integer.parseInt(message);
