@@ -11,6 +11,8 @@ public class System {
     public List<Chatbot> systemChatbots;
 
     public List<User> systemUsers;
+    int currentChatbot;
+    int currentFlow;
 
     /* Constructores */
     public System(String name, int initialChatbotCodeLink, List<Chatbot> systemChatbots) {
@@ -18,7 +20,8 @@ public class System {
         this.initialChatbotCodeLink = initialChatbotCodeLink;
         this.systemChatbots = systemChatbots;
         this.systemUsers = new ArrayList<>();
-
+        this.currentChatbot = initialChatbotCodeLink;
+        this.currentFlow = -1;
     }
 
     /* Selectores*/
@@ -76,7 +79,7 @@ public class System {
         }
     }
 
-    private boolean isSomeUserLogged(){
+    private boolean isAnyUserLogged(){
         for(User user : systemUsers){
             if (user.getUserStatus().equals("Logged")){
                 return true;
@@ -88,15 +91,23 @@ public class System {
     /* Metodo publico para cerrar la sesion del usuario que la tenga iniciada */
     public void systemLogout(){
         for(User user : systemUsers){
-            if (isSomeUserLogged()){
+            if (isAnyUserLogged()){
                 user.setUserStatus("notLogged");
                 break;
             }
         }
     }
     public void systemTalk(String message ){
-        if (isSomeUserLogged()){
+        if(isAnyUserLogged()){
 
+        }
+    }
+    private boolean isNumber(String message){
+        try {
+            Integer.parseInt(message);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
 
