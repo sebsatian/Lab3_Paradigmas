@@ -16,7 +16,6 @@ public class User {
         this.historial = new ArrayList<>();
         this.userStatus = "notLogged";
         this.userPermissions = "default";
-
     }
 
     /* Selectores */
@@ -38,4 +37,6 @@ public class User {
         this.userStatus = status;
 
     }
+
+
 }

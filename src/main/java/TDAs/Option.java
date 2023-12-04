@@ -21,7 +21,7 @@ public class Option {
         return code;
     }
 
-    public String getMensaje() {
+    public String getMessage() {
         return mensaje;
     }
     public int getChatbotCodeLink() {
