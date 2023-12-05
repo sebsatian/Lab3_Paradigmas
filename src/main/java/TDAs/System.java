@@ -198,3 +198,50 @@ public class System {
     }
 
 }
+
+// LO MISMO PERO DUPLICADO, SI HAY PROBLEMAS CON LO REDUNDANTE DE SELECTEDOPTION, SE OPTARA POR ESTA OPCION
+//    public void systemTalk(String message) {
+//  if (isAnyUserLogged()) {
+//            Chatbot currentChatbot = findChatbotByID(this.currentChatbotID);
+//
+//            Flow currentFlow = currentChatbot.findFlowByID(this.currentFlowID);
+//            if (isNumber(message)) {
+//                Option selectedOption = findOptionByNumber(message, currentFlow);
+//                /* Actualizar el estado del sistema */
+//                this.currentChatbotID = selectedOption.getChatbotCodeLink();
+//                this.currentFlowID = selectedOption.getInitialFlowCodeLink();
+//
+//                /* Encuentra el nuevo flujo que será la respuesta del chatbot */
+//                Flow botAnswer = currentChatbot.findFlowByID(this.currentFlowID);
+//
+//                /* Crea la nueva entrada en ChatHistory para guardar la interacción del usuario */
+//                ChatHistory userInteraction = new ChatHistory(
+//                        LocalDateTime.now(),
+//                        getLoggedUser().getUsername(),
+//                        message,
+//                        selectedOption.getMessage(),
+//                        currentChatbot.getName(),
+//                        botAnswer);
+//                getLoggedUser().getHistorial().add(userInteraction);
+//            }
+//            else{
+//                Option selectedOption = findOptionByKeyword(message, currentFlow);
+//                /* Actualizar el estado del sistema */
+//                this.currentChatbotID = selectedOption.getChatbotCodeLink();
+//                this.currentFlowID = selectedOption.getInitialFlowCodeLink();
+//
+//                /* Encuentra el nuevo flujo que será la respuesta del chatbot */
+//                Flow botAnswer = currentChatbot.findFlowByID(this.currentFlowID);
+//
+//                /* Crea la nueva entrada en ChatHistory para guardar la interacción del usuario */
+//                ChatHistory userInteraction = new ChatHistory(
+//                        LocalDateTime.now(),
+//                        getLoggedUser().getUsername(),
+//                        message,
+//                        selectedOption.getMessage(),
+//                        currentChatbot.getName(),
+//                        botAnswer);
+//                getLoggedUser().getHistorial().add(userInteraction);
+//            }
+//        }
+//    }
