@@ -178,7 +178,7 @@ public class System {
                 this.currentFlowID = selectedOption.getInitialFlowCodeLink();
 
                 /* Encuentra el nuevo flujo que sera considerado como la respuesta del chatbot */
-                Flow botAnswer = currentChatbot.findFlowByID(this.currentFlowID);
+                    Flow botAnswer = currentChatbot.findFlowByID(this.currentFlowID);
 
                 /* Verificar si el botAnswer es válido antes de continuar */
                 if (botAnswer != null) {
@@ -196,6 +196,12 @@ public class System {
             }
         }
     }
+
+
+    /* Metodo systemSynthesis, imprime en pantalla un resumen sobre el historial de un usuario */
+     public void systemSynthesis(User user){
+
+     }
 
 }
 
