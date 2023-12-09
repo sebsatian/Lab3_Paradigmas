@@ -1,17 +1,16 @@
 package TDAs;
 
 import java.util.List;
-import java.util.ArrayList;
 
-public class Flow {
+public class Flow_20937236_PaillaoEspindola {
     /* Atributos */
     int id;
     String message;
-    public List<Option> flowOptions;
+    public List<Option_20937236_PaillaoEspindola> flowOptions;
 
     /*  */
     /* Constructores */
-    public Flow(int id, String message, List<Option> flowOptions) {
+    public Flow_20937236_PaillaoEspindola(int id, String message, List<Option_20937236_PaillaoEspindola> flowOptions) {
         this.id = id;
         this.message = message;
         /* Se inicializa una lista*/
@@ -26,12 +25,12 @@ public class Flow {
     public String getMessage() {
         return message;
     }
-    public List<Option> getFlowOptions() {
+    public List<Option_20937236_PaillaoEspindola> getFlowOptions() {
         return flowOptions;
     }
 
     /* Método público flowAddOption*/
-    public void flowAddOption(Option newOption){
+    public void flowAddOption(Option_20937236_PaillaoEspindola newOption){
 
         /* Verifica pertenencia usando isOptionInFLow */
         if (!isOptionInFlow(newOption)){
@@ -41,8 +40,8 @@ public class Flow {
         }
     }
     /* Método privado para comprobar pertenencia */
-    private boolean isOptionInFlow(Option newOption){
-        for (Option option : flowOptions){
+    private boolean isOptionInFlow(Option_20937236_PaillaoEspindola newOption){
+        for (Option_20937236_PaillaoEspindola option : flowOptions){
             if (option.getCode() == newOption.getCode()){
                 return true;
             }

@@ -1,17 +1,17 @@
 package TDAs;
 import java.time.LocalDateTime;
-public class ChatHistory {
+public class ChatHistory_20937236_PaillaoEspindola {
     /* Atributos */
     LocalDateTime timestamp;
     String username;
     String message;
     String optionMessage;
     String currentChatbotName;
-    Flow currentFlow;
+    Flow_20937236_PaillaoEspindola currentFlow;
 
 
     /* Constructores */
-    public ChatHistory(LocalDateTime timestamp, String username, String message, String optionMessage, String currentChatbotName, Flow currentFlow) {
+    public ChatHistory_20937236_PaillaoEspindola(LocalDateTime timestamp, String username, String message, String optionMessage, String currentChatbotName, Flow_20937236_PaillaoEspindola currentFlow) {
         this.timestamp = timestamp;
         this.username = username;
         this.message = message;

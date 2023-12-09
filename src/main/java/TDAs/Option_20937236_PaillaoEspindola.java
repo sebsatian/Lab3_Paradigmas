@@ -1,15 +1,14 @@
 package TDAs;
 import java.util.List;
-import java.util.ArrayList;
 
-public class Option {
+public class Option_20937236_PaillaoEspindola {
     int code;
     String mensaje;
     int chatbotCodeLink;
     int initialFlowCodeLink;
     List<String> keywords;
 
-    public Option(int code, String mensaje, int chatbotCodeLink, int initialFlowCodeLink, List<String> keywords) {
+    public Option_20937236_PaillaoEspindola(int code, String mensaje, int chatbotCodeLink, int initialFlowCodeLink, List<String> keywords) {
         this.code = code;
         this.mensaje = mensaje;
         this.chatbotCodeLink = chatbotCodeLink;

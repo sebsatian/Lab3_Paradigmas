@@ -2,15 +2,15 @@ package TDAs;
 
 import java.util.List;
 import java.util.ArrayList;
-public class User {
+public class User_20937236_PaillaoEspindola {
     /* Atributos */
     String username;
-    public List<ChatHistory> historial;
+    public List<ChatHistory_20937236_PaillaoEspindola> historial;
     String userStatus;
     String userPermissions;
 
     /* Constructores */
-    public User(String username) {
+    public User_20937236_PaillaoEspindola(String username) {
 
         this.username = username;
         this.historial = new ArrayList<>();
@@ -22,7 +22,7 @@ public class User {
     public String getUsername() {
         return username;
     }
-    public List<ChatHistory> getHistorial() {
+    public List<ChatHistory_20937236_PaillaoEspindola> getHistorial() {
         return historial;
     }
     public String getUserStatus() {
