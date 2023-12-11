@@ -1,9 +1,7 @@
-package TDAs;
+package org.example.TDAs;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -66,9 +64,12 @@ public class System_20937236_PaillaoEspindola {
     }
 
     /* Metodo publico para añadir un usuario a la lista de usuarios del sistema */
-    public void systemAddUser(User_20937236_PaillaoEspindola newUser){
+    public boolean systemAddUser(User_20937236_PaillaoEspindola newUser){
         if(!isUserInSystem(newUser)){
             systemUsers.add(newUser);
+            return true; /* Usuario agregado exitosamente */
+        } else {
+            return false; /*  Usuario ya existe en el sistema */
         }
     }
 
@@ -83,15 +84,17 @@ public class System_20937236_PaillaoEspindola {
     }
 
     /* Metodo publico para iniciar sesion a un usuario*/
-    public void systemLogin(String username){
-        for (User_20937236_PaillaoEspindola user : systemUsers){
-            if (user.getUsername().equals(username) && user.getUserStatus().equals("notLogged")){
+    public boolean systemLogin(String username) {
+        for (User_20937236_PaillaoEspindola user : systemUsers) {
+            if (user.getUsername().equals(username) && user.getUserStatus().equals("notLogged")) {
                 user.setUserStatus("logged");
                 this.loggedUser = user;
-                break;
+                return true; // Inicio de sesión exitoso
             }
         }
+        return false; // Inicio de sesión fallido
     }
+
 
     /* Metodo privado para comprobar si hay un usuario loggeado */
     private boolean isAnyUserLogged(){
@@ -108,7 +111,7 @@ public class System_20937236_PaillaoEspindola {
     }
 
     /* Metodo privado para encontrar el flujo y el chatbot actuales */
-    private Chatbot_20937236_PaillaoEspindola findChatbotByID(int currentChatbotID) {
+    public Chatbot_20937236_PaillaoEspindola findChatbotByID(int currentChatbotID) {
         for (Chatbot_20937236_PaillaoEspindola chatbot : this.systemChatbots) {
             if (chatbot.getID() == currentChatbotID) {
                 return chatbot;

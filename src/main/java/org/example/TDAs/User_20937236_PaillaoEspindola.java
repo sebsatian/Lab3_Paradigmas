@@ -1,4 +1,4 @@
-package TDAs;
+package org.example.TDAs;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -37,6 +37,8 @@ public class User_20937236_PaillaoEspindola {
         this.userStatus = status;
 
     }
-
+    public void setUserPermissions(String username){
+        this.userPermissions = "admin";
+    }
 
 }

@@ -1,4 +1,4 @@
-package TDAs;
+package org.example.TDAs;
 import java.util.List;
 
 public class Option_20937236_PaillaoEspindola {

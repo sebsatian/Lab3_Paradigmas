@@ -1,4 +1,4 @@
-package TDAs;
+package org.example.TDAs;
 import java.time.LocalDateTime;
 public class ChatHistory_20937236_PaillaoEspindola {
     /* Atributos */
